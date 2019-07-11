@@ -8,6 +8,10 @@ const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT
 
+app.get('/', (req, res) => {
+    res.send('<H1>This is just a demo api so far. But be sure it wont stay like this forever.</h1>')
+})
+
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
